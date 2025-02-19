@@ -18,6 +18,8 @@ export default defineNuxtConfig({
   modules: [
     ['@storyblok/nuxt', { accessToken: process.env.STORYBLOK_TOKEN }],
     '@nuxt/image',
+    '@nuxtjs/google-fonts',
+    '@nuxt/icon'
   ],
 
   vite: {
@@ -33,6 +35,16 @@ export default defineNuxtConfig({
     provider: 'storyblok',
     storyblok: {
       baseURL: 'https://a.storyblok.com'
+    }
+  },
+
+  googleFonts: {
+    families: {
+      'IBM+Plex+Sans': {
+        wght: '400..700',
+        ital: '400..700',
+      },
+      'IBM+Plex+Mono': [400]
     }
   }
 })

@@ -1,0 +1,36 @@
+<script setup>
+const props = defineProps({ blok: Object })
+
+const { internalLink } = useLinks()
+
+const commonClasses = 'flex gap-2 py-3 px-6 text-md items-center'
+
+const variants = {
+  primary: 'relative bg-linear-to-r from-sap-dark to-sap-light font-bold text-white rounded-xl z-1',
+  link: 'underline decoration-2 underline-offset-2 text-slate-600 hover:text-slate-800'
+}
+
+const variantClasses = computed(() => {
+  return variants[props.blok.variant]
+})
+</script>
+
+<template>
+  <div class="relative group">
+    <NuxtLink
+      :to="internalLink(blok.link)"
+      :class="[commonClasses, variantClasses]"
+    >
+      {{ blok.label }}
+      <Icon v-if="blok.icon" :name="blok.icon" class="ms-6" />
+    </NuxtLink>
+    <div
+      v-if="blok.variant === 'primary'"
+      class="absolute inset-0 bg-linear-to-r from-sap-dark to-sap-light blur-sm group-hover:blur-md opacity-75 transition"
+    />
+  </div>
+</template>
+
+<style scoped>
+
+</style>
