@@ -3,7 +3,7 @@ defineProps({ blok: Object })
 </script>
 
 <template>
-  <header>
+  <SiteContainer v-editable="blok" tag="section" :id="blok.anchor" padded class="my-8 md:my-24">
     <pre>{{ blok }}</pre>
-  </header>
+  </SiteContainer>
 </template>

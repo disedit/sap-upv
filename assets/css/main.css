@@ -28,4 +28,26 @@
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--spacing-nav-area);
+}
+
+.card {
+  @apply border-[1.5px] border-slate-400 rounded-2xl overflow-clip;
+}
+
+.text-gradient {
+  @apply bg-gradient-to-r from-sap-dark to-sap-light bg-clip-text text-transparent;
+}
+
+.divider-top {
+  @apply border-t-[1.5px] border-slate-400;
+}
+
+.divider-right {
+  @apply border-r-[1.5px] border-slate-400;
+}
+
+.menu-item {
+  @apply flex font-mono uppercase text-slate-800 p-4 justify-center transition;
 }

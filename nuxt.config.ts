@@ -19,7 +19,8 @@ export default defineNuxtConfig({
     ['@storyblok/nuxt', { accessToken: process.env.STORYBLOK_TOKEN }],
     '@nuxt/image',
     '@nuxtjs/google-fonts',
-    '@nuxt/icon'
+    '@nuxt/icon',
+    '@vueuse/nuxt'
   ],
 
   vite: {
@@ -44,7 +45,7 @@ export default defineNuxtConfig({
         wght: '400..700',
         ital: '400..700',
       },
-      'IBM+Plex+Mono': [400]
+      'IBM+Plex+Mono': [400, 700]
     }
   }
 })

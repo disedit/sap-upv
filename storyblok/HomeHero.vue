@@ -11,17 +11,14 @@ defineProps({ blok: Object })
         <h1 class="text-2xl md:text-3xl 2xl:text-4xl max-w-[20ch]">
           <span>{{ blok.headline }}</span>
           {{ ' ' }}
-          <span class="bg-gradient-to-r from-sap-dark to-sap-light bg-clip-text text-transparent">{{ blok.headline_highlight }}</span>
+          <span class="text-gradient">{{ blok.headline_highlight }}</span>
         </h1>
         <UtilsRichText
           :text="blok.text"
           class="text-base md:text-md text-slate-600 max-w-[50ch]"
         />
         <div class="text-base md:text-md mt-[3vh]">
-          <div class="font-mono uppercase text-sm md:text-base flex items-center justify-center md:justify-start gap-1 text-slate-800">
-            <UtilsStatusCircle :color="blok.status_color" />
-            {{ blok.status }}
-          </div>
+          <UtilsStatus :status="blok.status" :status-color="blok.status_color" />
           <div class="flex gap-2 md:gap-site flex-wrap mt-6">
             <StoryblokComponent
               v-for="component in blok.ctas"

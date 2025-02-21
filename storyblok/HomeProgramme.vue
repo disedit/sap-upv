@@ -5,22 +5,22 @@ defineProps({ blok: Object })
 </script>
 
 <template>
-  <SiteContainer tag="section" v-editable="blok" padded class="my-8 md:my-24">
-    <h2 id="ProgramaHeading" class="text-xl bg-gradient-to-r from-sap-dark to-sap-light bg-clip-text text-transparent w-fit mb-2">
+  <SiteContainer tag="section" v-editable="blok" :id="blok.anchor" padded class="my-8 md:my-24">
+    <h2 id="ProgramaHeading" class="text-xl text-gradient w-fit mb-2">
       {{ blok.heading }}
     </h2>
     <UtilsRichText
       :text="blok.text"
       class="text-md text-slate-800"
     />
-    <div class="border-[1.5px] border-slate-400 rounded-2xl overflow-clip mt-8">
+    <div class="card mt-8">
       <UtilsTabs
         :tabs="blok.phases"
         labelled-by="ProgramaHeading"
       />
-      <div class="grid md:grid-cols-2 bg-slate-100 border-t-[1.5px] border-slate-400">
+      <div class="grid md:grid-cols-2 bg-slate-100 divider-top">
         <div class="p-site md:sticky top-nav-area">
-          <h3 class="text-lg bg-gradient-to-r from-sap-dark to-sap-light bg-clip-text text-transparent w-fit mb-2 leading-tight">
+          <h3 class="text-lg text-gradient w-fit mb-2 leading-tight">
             {{ blok.contents_heading }}
           </h3>
           <UtilsRichText

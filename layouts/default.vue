@@ -23,8 +23,9 @@ useHead({
   <div class="font-sans">
     <NuxtLoadingIndicator color="#015AAE" />
     <SiteNav />
-    <main>
+    <main id="main" class="pb-10">
       <slot />
+      <SiteMenu />
     </main>
     <SiteFooter />
   </div>
