@@ -20,8 +20,8 @@
 </template>
 
 <style scoped>
-.cls-1, .cls-2 {
-  stroke: #9795a3;
+.cls-1, .cls-2, .cls-3, .cls-4 {
+  stroke: var(--color-slate-400);
 }
 
 .cls-1, .cls-2, .cls-3, .cls-4 {
@@ -29,18 +29,14 @@
 }
 
 .cls-1, .cls-4 {
-  stroke-width: 2px;
+  stroke-width: 1.5px;
 }
 
 .cls-2 {
-  stroke-width: 2.05px;
+  stroke-width: 1.5px;
 }
 
 .cls-3 {
-  stroke-width: 2.42px;
-}
-
-.cls-3, .cls-4 {
-  stroke: #9b9ba4;
+  stroke-width: 1.5px;
 }
 </style>

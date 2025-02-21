@@ -16,7 +16,7 @@ const variantClasses = computed(() => {
 </script>
 
 <template>
-  <div class="relative group w-full md:w-auto">
+  <div v-editable="blok" class="relative group w-full md:w-auto">
     <NuxtLink
       :to="internalLink(blok.link)"
       :class="[commonClasses, variantClasses]"

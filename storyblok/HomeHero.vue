@@ -5,7 +5,7 @@ defineProps({ blok: Object })
 </script>
 
 <template>
-  <section class="relative overflow-clip">
+  <section v-editable="blok" class="relative overflow-clip">
     <SiteContainer class="p-site min-h-fill grid lg:grid-cols-2 gap-16 h-full pb-menu-area">
       <div class="flex flex-col gap-6 justify-evenly">
         <h1 class="text-2xl md:text-3xl 2xl:text-4xl max-w-[20ch]">
