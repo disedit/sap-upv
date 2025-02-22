@@ -20,7 +20,7 @@ onMounted(() => {
 
 <template>
   <SiteContainer v-editable="blok" tag="section" :id="blok.anchor" padded class="my-8 md:my-24">
-    <h2 class="text-xl text-gradient w-fit mb-4">
+    <h2 class="text-2xl text-gradient w-fit mb-4">
       {{ blok.heading }}
     </h2>
     <div class="grid md:grid-cols-2 gap-24">

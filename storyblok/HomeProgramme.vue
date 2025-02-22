@@ -6,12 +6,12 @@ defineProps({ blok: Object })
 
 <template>
   <SiteContainer tag="section" v-editable="blok" :id="blok.anchor" padded class="my-8 md:my-24">
-    <h2 id="ProgramaHeading" class="text-xl text-gradient w-fit mb-2">
+    <h2 id="ProgramaHeading" class="text-2xl text-gradient w-fit mb-2">
       {{ blok.heading }}
     </h2>
     <UtilsRichText
       :text="blok.text"
-      class="text-md text-slate-800"
+      class="text-md text-slate-600"
     />
     <div class="card mt-8">
       <UtilsTabs

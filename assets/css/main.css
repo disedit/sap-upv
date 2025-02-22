@@ -10,7 +10,7 @@
   --text-lg: clamp(1.56rem, 0.55vi + 1.43rem, 2.11rem);
   --text-xl: clamp(1.95rem, 0.86vi + 1.74rem, 2.81rem);
   --text-2xl: clamp(2.44rem, 1.31vi + 2.11rem, 3.75rem);
-  --text-2xl--line-height: 1;
+  --text-2xl--line-height: 1.2;
   --text-3xl: clamp(3.05rem, 1.95vi + 2.57rem, 5rem);
   --text-3xl--line-height: 1;
   --text-4xl: clamp(3.81rem, 2.85vi + 3.1rem, 6.66rem);
@@ -18,7 +18,7 @@
   --spacing-site: 1.5rem;
   --spacing-container: 2000px;
   --spacing-nav-area: 4rem;
-  --spacing-menu-area: calc(5vh + 10rem);
+  --spacing-menu-area: calc(5vh + 7rem);
   --spacing-fill: calc(100svh - var(--spacing-nav-area));
   --color-sap-light: #01AAEE;
   --color-sap-dark: #015AAE;
