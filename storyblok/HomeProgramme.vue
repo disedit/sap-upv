@@ -19,20 +19,58 @@ defineProps({ blok: Object })
         labelled-by="ProgramaHeading"
       />
       <div class="grid md:grid-cols-2 bg-slate-100 divider-top">
-        <div class="p-site md:sticky top-nav-area">
-          <h3 class="text-lg text-gradient w-fit mb-2 leading-tight">
-            {{ blok.contents_heading }}
-          </h3>
-          <UtilsRichText
-            :text="blok.contents_text"
-            class="text-base text-slate-800 max-w-[75ch]"
-          />
+        <div>
+          <div class="p-site md:sticky top-nav-area">
+            <h3 class="text-lg text-gradient w-fit mb-2 leading-tight">
+              {{ blok.contents_heading }}
+            </h3>
+            <UtilsRichText
+              :text="blok.contents_text"
+              class="text-base text-slate-800 max-w-[60ch]"
+            />
+          </div>
         </div>
         <div class="p-site programme-contents">
           <UtilsRichText
             :text="blok.contents"
             class="text-base"
           />
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 bg-slate-100 divider-top">
+        <div>
+          <div class="p-site md:sticky top-nav-area">
+            <h3 class="text-lg text-gradient w-fit mb-2 leading-tight">
+              {{ blok.methodology_heading }}
+            </h3>
+            <UtilsRichText
+              :text="blok.methodology_text"
+              class="text-base text-slate-800 max-w-[60ch]"
+            />
+          </div>
+        </div>
+        <div class="p-site flex flex-col gap-site text-base">
+          <div
+            v-for="feature in blok.methodology_features"
+            :key="feature._uid"
+            v-editable="feature"
+            class="flex gap-4"
+          >
+            <Icon
+              v-if="feature.icon"
+              name="hugeicons:new-job"
+              class="text-sap-dark text-xl shrink-0"
+            />
+            <div>
+              <h4
+                v-if="feature.heading"
+                class="text-gradient font-semibold text-md w-fit"
+              >
+                {{ feature.heading }}
+              </h4>
+              <UtilsRichText :text="feature.text" />
+            </div>
+          </div>
         </div>
       </div>
     </div>

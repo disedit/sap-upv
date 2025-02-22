@@ -5,7 +5,7 @@
   --font-mono: "IBM Plex Mono", sans-serif;
   --color-black: #000;
   --text-sm: clamp(0.8rem, 0.09vi + 0.78rem, 0.89rem);
-  --text-base: clamp(1rem, 0.19vi + 0.95rem, 1.19rem);
+  --text-base: clamp(1rem, 0.19vi + 0.95rem, 1.15rem);
   --text-md: clamp(1.25rem, 0.33vi + 1.17rem, 1.58rem);
   --text-lg: clamp(1.56rem, 0.55vi + 1.43rem, 2.11rem);
   --text-xl: clamp(1.95rem, 0.86vi + 1.74rem, 2.81rem);
@@ -50,4 +50,30 @@ html {
 
 .menu-item {
   @apply flex font-mono uppercase text-slate-800 p-4 justify-center transition;
+}
+
+.prose {
+  p:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      color: var(--color-sap-dark);
+    }
+  }
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 0.5s ease;
+  max-height: 100vh;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+  opacity: 0;
+  max-height: 0;
 }
