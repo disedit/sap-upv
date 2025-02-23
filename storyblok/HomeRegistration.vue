@@ -9,6 +9,8 @@ const showFinancing = ref(false)
     <UtilsBlockHeader
       v-if="blok.picture?.filename"
       :picture="blok.picture"
+      snug
+      :position="blok.picture_position"
     />
     <SiteContainer padded class="my-8 md:my-24">
       <div class="relative">

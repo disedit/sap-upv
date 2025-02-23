@@ -7,6 +7,7 @@ defineProps({ blok: Object })
     <UtilsBlockHeader
       v-if="blok.picture?.filename"
       :picture="blok.picture"
+      :position="blok.picture_position"
     />
     <SiteContainer padded>
       <div class="bg-white/80 backdrop-blur-md border-[1.5px] border-slate-400 rounded-2xl text-slate-800 overflow-clip">
