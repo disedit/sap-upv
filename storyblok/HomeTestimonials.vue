@@ -29,7 +29,7 @@ onMounted(() => {
       ease: "power4.out",
       scrollTrigger: {
         trigger: wrapper.value,
-        start: 'top 50%',
+        start: 'top 70%',
       }
     })
   }, 1000)
