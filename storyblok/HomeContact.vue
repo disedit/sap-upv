@@ -76,7 +76,7 @@ const clean = (text) => {
   }
 
   .socials {
-    gap: 1.5rem;
+    column-gap: 1.5rem;
   }
 }
 </style>

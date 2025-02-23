@@ -4,7 +4,7 @@ defineProps({ blok: Object })
 
 <template>
   <li v-editable="blok" class="grid grid-rows-subgrid row-span-4 gap-4 text-base">
-    <div>
+    <div class="pointer-events-none">
       <NuxtImg
         v-if="blok.picture.filename"
         :src="blok.picture.filename"

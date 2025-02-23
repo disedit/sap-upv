@@ -6,7 +6,7 @@ const { internalLink } = useLinks()
 const commonClasses = 'flex gap-16 py-3 px-6 items-center justify-center transition'
 
 const variants = {
-  primary: 'relative bg-linear-to-r from-sap-dark to-sap-light font-bold text-white rounded-xl z-1 group-hover:scale-[1.05]',
+  primary: 'relative bg-linear-to-r from-sap-dark to-sap-light font-bold text-white rounded-xl z-1 group-hover:scale-[1.02] group-hover:translate-y-[-5%]',
   link: 'underline decoration-2 underline-offset-2 text-slate-500 hover:text-slate-800'
 }
 

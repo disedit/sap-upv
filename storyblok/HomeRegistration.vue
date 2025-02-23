@@ -10,7 +10,11 @@ const showFinancing = ref(false)
       <div class="card border-sap-dark relative bg-white z-10">
         <div class="grid md:grid-cols-[1fr_3fr]">
           <div class="md:border-r-[1.5px] border-slate-400 p-site">
-            <UtilsStatus :status="blok.status" :status-color="blok.status_color" />
+            <UtilsStatus
+              :status="blok.status"
+              :status-color="blok.status_color"
+              class="justify-start"
+            />
             <h2 class="text-xl text-gradient w-fit my-2">
               {{ blok.heading }}
             </h2>
@@ -60,7 +64,7 @@ const showFinancing = ref(false)
         </div>
         <div id="financiacion" :class="['divider-top hover:bg-slate-100', { 'bg-slate-100': showFinancing }]">
           <button
-            class="group px-site py-4 text-md flex items-center gap-1 hover:bg-slate-100 cursor-pointer w-full"
+            class="group px-site py-4 text-md flex items-center gap-1 hover:bg-slate-100 cursor-pointer w-full text-left"
             @click="showFinancing = !showFinancing"
             :aria-expanded="showFinancing ? 'true' : 'false'"
             aria-controls="financingContents"

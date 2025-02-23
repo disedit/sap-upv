@@ -2,6 +2,9 @@
 import { UtilsRichText } from '#components';
 
 defineProps({ blok: Object })
+
+const showContents = ref(true)
+const showMethodology = ref(false)
 </script>
 
 <template>
@@ -21,57 +24,91 @@ defineProps({ blok: Object })
       <div class="grid md:grid-cols-2 bg-slate-100 divider-top">
         <div>
           <div class="p-site md:sticky top-nav-area">
-            <h3 class="text-lg text-gradient w-fit mb-2 leading-tight">
-              {{ blok.contents_heading }}
-            </h3>
-            <UtilsRichText
-              :text="blok.contents_text"
-              class="text-base text-slate-800 max-w-[60ch]"
-            />
+            <button
+              @click="showContents = !showContents"
+              :aria-expanded="showContents ? 'true' : 'false'"
+              aria-controls="contentContents"
+              class="group cursor-pointer flex items-center gap-2 w-full text-left"
+            >
+              <h3 class="text-lg text-gradient w-fit leading-tight">
+                {{ blok.contents_heading }}
+              </h3>
+              <Icon name="humbleicons:chevron-right" class="group-aria-[expanded=true]:rotate-90 transition text-md" />
+            </button>
+            <Transition name="slide">
+              <UtilsRichText
+                v-if="showContents"
+                :text="blok.contents_text"
+                class="text-base text-slate-800 max-w-[60ch] pt-4"
+              />
+            </Transition>
           </div>
         </div>
-        <div class="p-site programme-contents">
-          <UtilsRichText
-            :text="blok.contents"
-            class="text-base"
-          />
-        </div>
+        <Transition name="slide">
+          <div
+            v-if="showContents"
+            id="contentContents"
+            class="p-site programme-contents"
+          >
+              <UtilsRichText
+                :text="blok.contents"
+                class="text-base"
+              />
+          </div>
+        </Transition>
       </div>
       <div class="grid md:grid-cols-2 bg-slate-100 divider-top">
         <div>
           <div class="p-site md:sticky top-nav-area">
-            <h3 class="text-lg text-gradient w-fit mb-2 leading-tight">
-              {{ blok.methodology_heading }}
-            </h3>
-            <UtilsRichText
-              :text="blok.methodology_text"
-              class="text-base text-slate-800 max-w-[60ch]"
-            />
+            <button
+              @click="showMethodology = !showMethodology"
+              :aria-expanded="showMethodology ? 'true' : 'false'"
+              aria-controls="methodologyContents"
+              class="group cursor-pointer flex items-center gap-2 w-full text-left"
+            >
+              <h3 class="text-lg text-gradient w-fit leading-tight">
+                {{ blok.methodology_heading }}
+              </h3>
+              <Icon name="humbleicons:chevron-right" class="group-aria-[expanded=true]:rotate-90 transition text-md" />
+            </button>
+            <Transition name="slide">
+              <UtilsRichText
+                v-if="showMethodology"
+                :text="blok.methodology_text"
+                class="text-base text-slate-800 max-w-[60ch] pt-4"
+              />
+            </Transition>
           </div>
         </div>
-        <div class="p-site flex flex-col gap-site text-base">
+        <Transition name="slide">
           <div
-            v-for="feature in blok.methodology_features"
-            :key="feature._uid"
-            v-editable="feature"
-            class="flex gap-4"
+            v-if="showMethodology"
+            id="methodologyContents"
+            class="p-site flex flex-col gap-site text-base"
           >
-            <Icon
-              v-if="feature.icon"
-              name="hugeicons:new-job"
-              class="text-sap-dark text-xl shrink-0"
-            />
-            <div>
-              <h4
-                v-if="feature.heading"
-                class="text-gradient font-semibold text-md w-fit"
-              >
-                {{ feature.heading }}
-              </h4>
-              <UtilsRichText :text="feature.text" />
+            <div
+              v-for="feature in blok.methodology_features"
+              :key="feature._uid"
+              v-editable="feature"
+              class="flex gap-4"
+            >
+              <Icon
+                v-if="feature.icon"
+                name="hugeicons:new-job"
+                class="text-sap-dark text-xl shrink-0"
+              />
+              <div>
+                <h4
+                  v-if="feature.heading"
+                  class="text-gradient font-semibold text-md w-fit"
+                >
+                  {{ feature.heading }}
+                </h4>
+                <UtilsRichText :text="feature.text" />
+              </div>
             </div>
           </div>
-        </div>
+        </Transition>
       </div>
     </div>
   </SiteContainer>

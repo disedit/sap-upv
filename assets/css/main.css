@@ -32,6 +32,11 @@ html {
   scroll-padding-top: var(--spacing-nav-area);
 }
 
+*:focus-visible {
+  outline: 2px var(--color-sap-dark) solid;
+  outline-offset: 3px;
+}
+
 .card {
   @apply border-[1.5px] border-slate-400 rounded-2xl overflow-clip;
 }

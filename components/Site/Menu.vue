@@ -44,8 +44,8 @@ const visibleElement = computed(() => {
 <template>
   <nav class="sticky bottom-12 z-[1000]">
     <ul class="
-      bg-white/80 max-w-[900px] mx-auto shadow-xl shadow-slate-800/10 rounded-xl backdrop-blur-md border border-slate-200
-      flex text-base overflow-clip
+      bg-white/80 max-w-[900px] mx-auto shadow-xl shadow-slate-800/10 rounded-xl backdrop-blur-md
+      border border-slate-200 flex text-base overflow-clip
     ">
       <li
         v-for="item in firstThreeItems"
@@ -55,7 +55,7 @@ const visibleElement = computed(() => {
         <NuxtLink
           :to="internalLink(item.link)"
           :class="[
-            'menu-item hover:bg-slate-800/5',
+            'menu-item hover:bg-sap-dark/5',
             { 'font-bold': item.link.anchor && visibleElement === item.link.anchor }
           ]"
         >
@@ -63,23 +63,21 @@ const visibleElement = computed(() => {
         </NuxtLink>
       </li>
       <li v-if="menu.length > 4" class="basis-[50%]">
-        <button class="menu-item w-full hover:bg-slate-800/5 cursor-pointer items-center gap-2">
+        <button class="menu-item w-full hover:bg-sap-dark/5 cursor-pointer items-center gap-2">
           Más
           <Icon name="humbleicons:chevron-up" />
         </button>
       </li>
       <li
         v-if="menu.length > 3"
-        class="basis-[50%]"
+        class="basis-[50%] hover:bg-sap-dark/5"
       >
         <NuxtLink
           :to="internalLink(lastItem.link)"
-          :class="[
-            `
+          class="
             block font-mono uppercase text-slate-800 p-4 text-center transition
-            font-bold text-gradient border-l border-slate-800/10 hover:bg-sap-dark
-            `
-          ]"
+            font-bold text-gradient border-l border-slate-800/10
+           "
         >
           {{ lastItem.label }}
         </NuxtLink>

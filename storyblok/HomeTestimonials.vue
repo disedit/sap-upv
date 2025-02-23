@@ -16,7 +16,7 @@ const rows = computed(() => {
 <template>
   <section v-editable="blok" :id="blok.anchor" class="my-8 md:mt-24 md:mb-40">
     <SiteContainer padded>
-      <h2 class="text-2xl text-gradient w-fit" :id="blok.anchor + 'Heading'">
+      <h2 class="text-2xl text-gradient w-fit hyphens-auto" :id="blok.anchor + 'Heading'">
         {{ blok.heading }}
       </h2>
       <UtilsRichText
@@ -29,12 +29,13 @@ const rows = computed(() => {
       <div
         v-for="(row, r) in rows"
         :key="r"
-        class="flex gap-site"
+        class="flex gap-site overflow-auto"
       >
         <StoryblokComponent
           v-for="component in row"
           :key="component._uid"
           :blok="component"
+          class="w-[30vw] h-[12vw] shrink-0"
         />
       </div>
     </div>
