@@ -22,8 +22,7 @@ onMounted(() => {
         trigger: textContainer.value,
         start: "top 150%",
         end: "bottom 70%",
-        scrub: .5,
-        markers: true
+        scrub: .5
       }
     })
     let tlPicturesSm = $gsap.timeline({
