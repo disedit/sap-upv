@@ -3,7 +3,7 @@ const settings = await useSettings()
 </script>
 
 <template>
-  <header class="fixed top-0 left-0 right-0 px-3 text-sm md:text-base z-[1050]">
+  <header class="fixed top-0 left-0 right-0 md:px-3 text-sm md:text-base z-[1050]">
     <div class="flex bg-slate-200/80 max-w-container rounded-bl-lg rounded-br-lg overflow-clip mx-auto backdrop-blur-md">
       <NuxtLink to="/" class="flex items-center gap-[.3em] py-3 px-4 xl:px-6 text-nowrap hover:opacity-75 transition">
         Máster de Gestión de Proyectos con
