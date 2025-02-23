@@ -2,7 +2,7 @@
 useHead({
   htmlAttrs: { lang: 'es-ES' },
   meta: [
-    { name: 'theme-color', content: '#e7ecf2' },
+    { name: 'theme-color', content: '#015AAE' },
     { name: 'msapplication-TileColor', content: '#015AAE' },
     { name: 'apple-mobile-web-app-title', content: 'SAP UPV' }
   ],
