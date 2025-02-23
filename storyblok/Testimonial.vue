@@ -17,7 +17,7 @@ defineProps({ blok: Object })
          <h3 class="text-base font-semibold">
             {{ blok.name }}
          </h3>
-         <p class="text-sm text-slate-600 leading-tight">
+         <p class="text-sm text-slate-600 leading-tight text-balance">
             {{ blok.description }}
          </p>
       </div>
