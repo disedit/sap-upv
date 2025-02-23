@@ -18,7 +18,7 @@ onMounted(() => {
       observer: new IntersectionObserver(observe)
     }
     const target = document.querySelector(`#${item.link.anchor}`)
-    elements[item.link.anchor].observer.observe(target)
+    if (target) elements[item.link.anchor].observer.observe(target)
   })
 })
 

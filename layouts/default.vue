@@ -24,7 +24,9 @@ useHead({
     <NuxtLoadingIndicator color="#015AAE" />
     <SiteNav />
     <main id="main" class="pb-10">
+      <div class="min-h-fill">
       <slot />
+      </div>
       <SiteMenu />
     </main>
     <SiteFooter />

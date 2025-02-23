@@ -54,13 +54,14 @@ onMounted(() => {
         :key="r"
         :direction="r === 0 ? 'normal' : 'reverse'"
         :duration="parseInt(blok.marquee_duration) || 100"
+        class="min-h-250px md:min-h-[12vw]"
       >
         <div class="testiline flex gap-site me-site">
           <StoryblokComponent
             v-for="component in row"
             :key="component._uid"
             :blok="component"
-            class="w-[90vw] min-h-250px md:w-[30vw] md:min-h-[12vw] shrink-0"
+            class="w-[90vw] md:w-[30vw] min-h-250px md:min-h-[12vw] shrink-0"
           />
         </div>
       </Vue3Marquee>

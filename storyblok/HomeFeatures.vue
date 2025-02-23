@@ -14,7 +14,7 @@ defineProps({ blok: Object })
         />
       </div>
       <div class="divider-top p-site">
-        <div class="text-center font-bold text-md md:text-base text-balance mb-site">
+        <div class="text-center font-bold text-base text-balance mb-site leading-tight">
           {{ blok.logos_text }}
         </div>
         <div class="flex flex-wrap justify-evenly">

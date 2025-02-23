@@ -127,7 +127,7 @@ function momentumLoop () {
   &-items {
     display: grid;
     grid-auto-rows: repeat(4, auto);
-    gap: calc(3vw + 1rem);
+    column-gap: calc(3vw + 1rem);
   }
 }
 

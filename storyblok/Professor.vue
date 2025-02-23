@@ -3,13 +3,13 @@ defineProps({ blok: Object })
 </script>
 
 <template>
-  <li v-editable="blok" class="grid grid-rows-subgrid row-span-4 gap-4 text-base">
+  <li v-editable="blok" class="grid grid-rows-subgrid row-span-4 gap-2 text-base">
     <div class="pointer-events-none">
       <NuxtImg
         v-if="blok.picture.filename"
         :src="blok.picture.filename"
         :alt="blok.picture.alt"
-        class="w-full rounded-full"
+        class="w-full rounded-full mb-4"
         sizes="400px"
       />
     </div>

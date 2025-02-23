@@ -3,7 +3,7 @@ defineProps({ blok: Object })
 </script>
 
 <template>
-  <SiteContainer v-editable="blok" tag="section" padded class="my-8 md:my-24">
+  <SiteContainer v-editable="blok" :id="blok.anchor" tag="section" padded class="my-8 md:my-24">
     <div class="card">
       <div class="p-site">
         <h2 class="text-gradient leading-none text-xl w-fit mb-4">
