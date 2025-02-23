@@ -16,7 +16,7 @@ defineProps({ blok: Object })
           </h2>
           <UtilsRichText
             :text="blok.text"
-            class="text-base text-slate-800 max-w-[100ch]"
+            class="text-base text-slate-800 max-w-[100ch] text-balance"
           />
         </div>
         <div class="divider-top flex flex-col md:flex-row divide-slate-400 divide-y-[1.5px] md:divide-y-0 md:divide-x-[1.5px]">

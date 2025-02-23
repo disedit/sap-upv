@@ -12,7 +12,7 @@ defineProps({
 </script>
 
 <template>
-  <Component :is="tag" :class="['max-w-container mx-auto', { 'p-site': padded }]">
+  <Component :is="tag" :class="['max-w-container mx-auto', { 'p-site md:px-padder': padded }]">
     <slot />
   </Component>
 </template>

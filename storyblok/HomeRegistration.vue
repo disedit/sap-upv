@@ -24,7 +24,7 @@ const showFinancing = ref(false)
                 {{ blok.heading }}
               </h2>
 
-              <p class="text-base text-slate-700 leading-tight">
+              <p class="text-base text-slate-700 leading-tight text-balance">
                 {{ blok.text }}
               </p>
               <p class="text-lg mb-4">

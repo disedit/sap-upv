@@ -16,6 +16,7 @@
   --text-4xl: clamp(3.81rem, 2.85vi + 3.1rem, 6.66rem);
   --text-4xl--line-height: 1;
   --spacing-site: 1.5rem;
+  --spacing-padder: 2rem;
   --spacing-container: 2000px;
   --spacing-nav-area: 4rem;
   --spacing-menu-area: calc(5vh + 7rem);
