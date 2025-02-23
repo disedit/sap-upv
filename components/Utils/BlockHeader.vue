@@ -7,13 +7,13 @@ defineProps({
 </script>
 
 <template>
-  <div :class="['relative', { '-mb-[calc(10rem+17vh)]': snug, '-mb-[calc(5rem+17vh)]': !snug }]">
+  <div :class="['relative -mb-[calc(5rem+10vh)]', { 'md:-mb-[calc(10rem+17vh)]': snug, 'md:-mb-[calc(5rem+17vh)]': !snug }]">
     <NuxtPicture
       format="avif,webp"
       :src="picture.filename"
       :img-attrs="{
         alt: picture.alt,
-        class: ['w-full h-[calc(28rem+13vh)] rounded-tl-4xl rounded-tr-4xl object-cover', {
+        class: ['w-full h-[calc(15rem+13vh)] md:h-[calc(28rem+13vh)] rounded-tl-4xl rounded-tr-4xl object-cover', {
           'object-top': position === 'top',
           'object-center': position === 'center',
           'object-bottom': position === 'bottom'

@@ -112,3 +112,7 @@ html {
   opacity: 0;
   max-height: 0;
 }
+
+.img-reset {
+  max-width: unset !important;
+}

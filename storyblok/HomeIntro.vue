@@ -78,7 +78,7 @@ onMounted(() => {
             </span>
           </p>
           <div class="lg:hidden sticky bottom-28 pt-6">
-            <div class="relative h-[20vh]">
+            <div class="relative h-[20vh] min-h-[11rem]">
               <div
                 v-for="(picture, p) in blok.pictures"
                 :key="picture._uid"
@@ -91,7 +91,10 @@ onMounted(() => {
                   v-if="picture.filename"
                   format="avif,webp"
                   :src="picture.filename"
-                  :img-attrs="{ alt: picture.alt, class: p > 0 ? 'intro-picture-sm rounded-2xl h-full w-auto' : 'rounded-2xl h-full w-auto' }"
+                  :img-attrs="{
+                    alt: picture.alt,
+                    class: ['rounded-2xl h-full max-w-auto w-auto mx-auto', { 'intro-picture-sm' : p > 0}]
+                  }"
                   preload
                   sizes="500px"
                 />
@@ -114,7 +117,10 @@ onMounted(() => {
                   v-if="picture.filename"
                   format="avif,webp"
                   :src="picture.filename"
-                  :img-attrs="{ alt: picture.alt, class: p > 0 ? 'intro-picture rounded-3xl h-full w-auto' : 'rounded-3xl h-full w-auto' }"
+                  :img-attrs="{
+                    alt: picture.alt,
+                    class: ['rounded-3xl h-full img-reset w-auto', { 'intro-picture-sm' : p > 0}],
+                  }"
                   preload
                   sizes="500px"
                 />
