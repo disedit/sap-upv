@@ -3,6 +3,7 @@ defineProps({ blok: Object })
 
 const { $gsap } = useNuxtApp()
 const textContainer = ref()
+const picturesContainer = ref()
 
 onMounted(() => {
     const words = document.querySelectorAll('.word')
@@ -19,15 +20,16 @@ onMounted(() => {
     let tlPictures = $gsap.timeline({
       scrollTrigger: {
         trigger: textContainer.value,
-        start: "top 20%",
+        start: "top 150%",
         end: "bottom 70%",
-        scrub: .5
+        scrub: .5,
+        markers: true
       }
     })
     let tlPicturesSm = $gsap.timeline({
       scrollTrigger: {
-        trigger: textContainer.value,
-        start: "top 50%",
+        trigger: picturesContainer.value,
+        start: "top 100%",
         end: "bottom 70%",
         scrub: .5,
       }
@@ -102,7 +104,7 @@ onMounted(() => {
             </div>
           </div>
         </div>
-        <div class="hidden lg:block">
+        <div ref="picturesContainer" class="hidden lg:block">
           <div class="sticky top-[calc(var(--spacing-nav-area)+2rem)]">
             <div class="relative h-[50vh]">
               <div

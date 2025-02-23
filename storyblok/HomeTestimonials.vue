@@ -55,8 +55,17 @@ onMounted(() => {
         :direction="r === 0 ? 'normal' : 'reverse'"
         :duration="parseInt(blok.marquee_duration) || 100"
         class="min-h-250px md:min-h-[12vw]"
+        :style="{
+          overflow: 'auto !important'
+        }"
       >
         <div class="testiline flex gap-site me-site">
+          <StoryblokComponent
+            v-for="component in row"
+            :key="component._uid"
+            :blok="component"
+            class="w-[90vw] md:w-[30vw] min-h-250px md:min-h-[12vw] shrink-0"
+          />
           <StoryblokComponent
             v-for="component in row"
             :key="component._uid"

@@ -2,22 +2,20 @@
 const { $gsap } = useNuxtApp()
 
 onMounted(() => {
-  document.addEventListener("DOMContentLoaded", function() {
-    const animatedLines = document.querySelectorAll('.animated-line')
+  const animatedLines = document.querySelectorAll('.animated-line')
 
-    animatedLines.forEach(line => {
-      const length = line.getTotalLength() + 1
-      $gsap.set(line, { strokeDasharray: length, strokeDashoffset: length })
-    })
+  animatedLines.forEach(line => {
+    const length = line.getTotalLength() + 1
+    $gsap.set(line, { strokeDasharray: length, strokeDashoffset: length })
+  })
 
-    $gsap.to('.animated-line', {
-      strokeDashoffset: 0,
-      duration: .5,
-      ease: 'Power4.out',
-      stagger: {
-          each: .1
-      }
-    })
+  $gsap.to('.animated-line', {
+    strokeDashoffset: 0,
+    duration: .5,
+    ease: 'Power4.out',
+    stagger: {
+        each: .1
+    }
   })
 })
 </script>
