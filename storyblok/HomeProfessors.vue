@@ -3,6 +3,25 @@ defineProps({ blok: Object })
 
 const showGrid = ref(false)
 
+const { $gsap } = useNuxtApp()
+const professors = ref()
+onMounted(() => {
+  $gsap.from('.professor', {
+    opacity: 0,
+    x: 50,
+    stagger: {
+        each: .1,
+        ease: 'power1.out',
+    },
+    duration: .25,
+    ease: "power4.out",
+    scrollTrigger: {
+      trigger: professors.value,
+      start: 'top center'
+    }
+  })
+})
+
 const slider = ref(null)
 const isDown = ref(false)
 const startX = ref(null)
@@ -59,7 +78,7 @@ function momentumLoop () {
 </script>
 
 <template>
-  <section v-editable="blok" :id="blok.anchor" class="my-8 md:my-24">
+  <section v-editable="blok" ref="professors" :id="blok.anchor" class="my-8 md:my-24">
     <SiteContainer padded class="flex">
       <div>
         <h2 class="text-2xl text-gradient w-fit" :id="blok.anchor + 'Heading'">
@@ -93,6 +112,7 @@ function momentumLoop () {
             v-for="component in blok.professors"
             :key="component._uid"
             :blok="component"
+            class="professor"
           />
         </div>
       </ul>
@@ -102,6 +122,8 @@ function momentumLoop () {
 
 <style lang="scss" scoped>
 .professor-list {
+  user-select: none;
+
   &-items {
     display: grid;
     grid-auto-rows: repeat(4, auto);

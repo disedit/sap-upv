@@ -66,7 +66,7 @@ onMounted(() => {
         {{ blok.heading }}
       </h2>
       <div class="grid lg:grid-cols-2 gap-24">
-        <div ref="textContainer" class="text-lg leading-[1.25] text-slate-800 lg:max-w-[45ch]">
+        <div ref="textContainer" class="text-lg leading-tight text-slate-800 lg:max-w-[45ch]">
           <p
             v-for="fragment in blok.text_fragments"
             v-editable="fragment"
@@ -77,7 +77,7 @@ onMounted(() => {
               {{ word }} {{ ' ' }}
             </span>
           </p>
-          <div class="lg:hidden sticky bottom-menu-area">
+          <div class="lg:hidden sticky bottom-28 pt-6">
             <div class="relative h-[20vh]">
               <div
                 v-for="(picture, p) in blok.pictures"
