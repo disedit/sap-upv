@@ -122,3 +122,5 @@ html {
     overflow: auto !important;
   }
 }
+
+@media (width >= 48rem){.md\:divide-x-\[1\.5px\] :where(>:not(:last-child)){--tw-divide-x-reverse:0;border-inline-end-width:calc(1.5px*(1 - var(--tw-divide-x-reverse)));border-inline-start-width:calc(1.5px*var(--tw-divide-x-reverse));border-inline-style:var(--tw-border-style)}}

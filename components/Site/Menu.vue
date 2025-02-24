@@ -124,7 +124,7 @@ function onLeaveCancelled() {
 </script>
 
 <template>
-  <nav class="sticky bottom-3 md:bottom-12 z-[1000] px-3">
+  <nav class="sticky bottom-3 md:bottom-6 2xl:bottom-12 z-[1000] px-3">
     <ul class="
       bg-white/80 md:max-w-[900px] mx-auto shadow-xl shadow-slate-800/10 rounded-xl backdrop-blur-md
       border border-slate-200 flex text-base overflow-clip
