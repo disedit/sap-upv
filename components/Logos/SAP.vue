@@ -12,22 +12,22 @@
 </template>
 
 <style lang="scss" scoped>
-  .cls-1 {
-    fill: var(--color-white);
-  }
-
-  .cls-2 {
-    fill: var(--color-sap-dark);
-  }
-
   .nav {
     .cls-1 {
-      fill: url(#linear-gradient);
+      fill: var(--color-white);
     }
 
     .cls-2 {
-      fill: var(--color-white);
+      fill: var(--color-sap-dark);
     }
+  }
+
+  .cls-1 {
+    fill: url(#linear-gradient);
+  }
+
+  .cls-2 {
+    fill: var(--color-white);
   }
 
   @media (width >= 40rem) {
