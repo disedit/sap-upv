@@ -20,7 +20,7 @@ defineProps({ blok: Object })
             class="text-base text-slate-800 max-w-[100ch] text-balance"
           />
         </div>
-        <div class="divider-top flex flex-col md:flex-row divide-slate-400 divide-y-[1.5px] md:divide-y-0 md:divide-x-[1.5px]">
+        <div class="divider-top flex flex-col md:flex-row divide-slate-400 divider-cols">
           <article
             v-for="certificate in blok.certificates"
             v-editable="certificate"
@@ -37,7 +37,7 @@ defineProps({ blok: Object })
             </div>
             <UtilsRichText
               :text="certificate.description"
-              class="mt-auto text-base"
+              class="text-base"
             />
           </article>
         </div>

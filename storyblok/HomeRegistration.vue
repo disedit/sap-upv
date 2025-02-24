@@ -59,7 +59,7 @@ const showFinancing = ref(false)
               <div class="p-site text-base text-slate-800">
                 {{ blok.features_text }}
               </div>
-              <div class="divider-top flex flex-col md:flex-row divide-slate-400 divide-y-[1.5px] md:divide-y-0 md:divide-x-[1.5px] grow">
+              <div class="divider-top flex flex-col md:flex-row divide-slate-400 divider-cols grow">
                 <StoryblokComponent
                   v-for="feature in blok.features"
                   :key="feature._uid"

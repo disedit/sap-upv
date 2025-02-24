@@ -11,7 +11,7 @@ defineProps({ blok: Object })
     />
     <SiteContainer padded>
       <div class="bg-white/80 backdrop-blur-md border-[1.5px] border-slate-400 rounded-2xl text-slate-800 overflow-clip">
-        <div class="flex flex-col md:flex-row divide-y-[1.5px] md:divide-y-0 md:divide-x-[1.5px] divide-slate-400">
+        <div class="flex flex-col md:flex-row divider-cols divide-slate-400">
           <StoryblokComponent
             v-for="feature in blok.features"
             :key="feature._uid"
