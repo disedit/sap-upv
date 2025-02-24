@@ -31,12 +31,14 @@
   }
 
   @media (width >= 40rem) {
-    .cls-1 {
-      fill: url(#linear-gradient);
-    }
+    .nav {
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
 
-    .cls-2 {
-      fill: var(--color-white);
+      .cls-2 {
+        fill: var(--color-white);
+      }
     }
   }
 </style>
