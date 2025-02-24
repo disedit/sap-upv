@@ -117,11 +117,13 @@ html {
   max-width: unset !important;
 }
 
+/*
 @media (width <= 40rem) {
   .scrollable {
     overflow: auto !important;
   }
 }
+*/
 
 .divider-cols > *:not(:last-child) {
   border-bottom: 1.5px var(--color-slate-400) solid;

@@ -54,10 +54,7 @@ onMounted(() => {
         :key="r"
         :direction="r === 0 ? 'normal' : 'reverse'"
         :duration="parseInt(blok.marquee_duration) || 100"
-        class="min-h-250px md:min-h-[12vw]"
-        :style="{
-          overflow: 'auto !important'
-        }"
+        class="min-h-250px md:min-h-[12vw] scrollable"
       >
         <div class="testiline flex gap-site me-site">
           <StoryblokComponent
@@ -77,7 +74,3 @@ onMounted(() => {
     </div>
   </section>
 </template>
-
-<style lang="scss" scoped>
-
-</style>
