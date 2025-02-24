@@ -6,7 +6,7 @@ onMounted(() => {
 
   animatedLines.forEach(line => {
     const length = line.getTotalLength() + 1
-    $gsap.set(line, { strokeDasharray: length, strokeDashoffset: length })
+    $gsap.set(line, { strokeDasharray: length, strokeDashoffset: length, opacity: 100 })
   })
 
   $gsap.to('.animated-line', {
@@ -42,5 +42,6 @@ onMounted(() => {
   stroke: var(--color-slate-400);
   fill: none;
   stroke-width: 1.5px;
+  opacity: 0;
 }
 </style>
