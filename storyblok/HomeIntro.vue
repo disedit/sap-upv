@@ -20,15 +20,15 @@ onMounted(() => {
     let tlPictures = $gsap.timeline({
       scrollTrigger: {
         trigger: textContainer.value,
-        start: "top 150%",
+        start: "top 20%",
         end: "bottom 70%",
         scrub: .5
       }
     })
     let tlPicturesSm = $gsap.timeline({
       scrollTrigger: {
-        trigger: picturesContainer.value,
-        start: "top 100%",
+        trigger: textContainer.value,
+        start: "top 50%",
         end: "bottom 70%",
         scrub: .5,
       }
@@ -120,7 +120,7 @@ onMounted(() => {
                   :src="picture.filename"
                   :img-attrs="{
                     alt: picture.alt,
-                    class: ['rounded-3xl h-full img-reset w-auto', { 'intro-picture-sm' : p > 0}],
+                    class: ['rounded-3xl h-full img-reset w-auto', { 'intro-picture' : p > 0}],
                   }"
                   preload
                   sizes="500px"
