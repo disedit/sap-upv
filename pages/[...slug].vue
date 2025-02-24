@@ -24,7 +24,7 @@ const siteName = global.site_name
 const title = slug && slug.length > 0 ? `${page.title || page.name} - ${siteName}` : siteName
 const ogTitle = page.seo_title || title
 const description = page.seo_description || global.seo_description
-const ogImage = page.seo_picture?.filename || page.thumbnail?.filename || global.og_image?.filename
+const ogImage = page.seo_picture?.filename || page.thumbnail?.filename || global.og_picture?.filename
 const keywords = page.seo_keywords || global.seo_keywords
 const twitterSite = global.x_account
 useServerSeoMeta({

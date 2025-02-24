@@ -94,7 +94,7 @@ const showMethodology = ref(false)
             >
               <Icon
                 v-if="feature.icon"
-                name="hugeicons:new-job"
+                :name="feature.icon"
                 class="text-sap-dark text-xl shrink-0"
               />
               <div>
