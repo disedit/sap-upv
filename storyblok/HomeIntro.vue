@@ -20,7 +20,7 @@ onMounted(() => {
     let tlPictures = $gsap.timeline({
       scrollTrigger: {
         trigger: textContainer.value,
-        start: "top 20%",
+        start: "top 40%",
         end: "bottom 70%",
         scrub: .5
       }
