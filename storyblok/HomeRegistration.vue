@@ -20,6 +20,7 @@ const showFinancing = ref(false)
               <UtilsStatus
                 :status="blok.status"
                 :status-color="blok.status_color"
+                :status-pulse="blok.status_pulse"
                 class="justify-start"
               />
               <h2 class="text-xl text-gradient w-fit my-2">

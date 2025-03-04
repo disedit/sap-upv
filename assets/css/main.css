@@ -4,8 +4,8 @@
   --font-sans: "IBM Plex Sans", sans-serif;
   --font-mono: "IBM Plex Mono", sans-serif;
   --color-black: #000;
-  --text-sm: clamp(0.8rem, 0.09vi + 0.78rem, 0.89rem);
-  --text-base: clamp(1rem, 0.17vi + 0.8rem, 1.15rem);
+  --text-sm: clamp(0.8rem, 0.9vi + 0.78rem, 0.95rem);
+  --text-base: clamp(1rem, 0.21vi + 0.8rem, 1.15rem);
   --text-md: clamp(1.2rem, 0.30vi + 1.1rem, 1.5rem);
   --text-lg: clamp(1.5rem, 0.55vi + 1.43rem, 2.11rem);
   --text-xl: clamp(1.95rem, 0.86vi + 1.74rem, 2.81rem);
@@ -13,7 +13,7 @@
   --text-2xl--line-height: 1.2;
   --text-3xl: clamp(3.05rem, 1.95vi + 2.57rem, 5rem);
   --text-3xl--line-height: 1;
-  --text-4xl: clamp(3.81rem, 2.85vi + 3.1rem, 6.66rem);
+  --text-4xl: clamp(3.81rem, 2.55vi + 2.1rem, 6.66rem);
   --text-4xl--line-height: 1;
   --spacing-site: 1.5rem;
   --spacing-padder: 2rem;

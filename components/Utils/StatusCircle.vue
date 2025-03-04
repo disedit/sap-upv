@@ -18,6 +18,7 @@ defineProps({
       'bg-red-500 color-red': color === 'red',
       'bg-amber-500 color-orange': color === 'orange',
       'bg-blue-500 color-blue': color === 'blue',
+      'bg-slate-500 color-gray': color === 'gray',
       'pulse': pulse
     }]"
   />
@@ -44,6 +45,10 @@ defineProps({
 
 .color-blue {
   --color: var(--color-blue-500);
+}
+
+.color-gray {
+  --color: var(--color-slate-500);
 }
 
 @keyframes pulse {

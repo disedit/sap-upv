@@ -20,7 +20,7 @@ defineProps({ blok: Object })
           />
         </div>
         <div class="text-base md:text-md mt-[3vh]">
-          <UtilsStatus :status="blok.status" :status-color="blok.status_color" />
+          <UtilsStatus :status="blok.status" :status-color="blok.status_color" :status-pulse="blok.status_pulse" />
           <div class="flex gap-2 md:gap-site flex-wrap mt-6">
             <StoryblokComponent
               v-for="component in blok.ctas"
