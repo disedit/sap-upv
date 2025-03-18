@@ -21,6 +21,7 @@ const platformIcons = {
       :key="social._uid"
     >
       <a
+        v-if="platformIcons[social.platform]"
         :href="social.url"
         target="_blank"
         rel="noopener noreferer"

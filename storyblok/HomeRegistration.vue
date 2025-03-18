@@ -30,8 +30,16 @@ const showFinancing = ref(false)
               <p class="text-base text-slate-700 leading-tight text-balance">
                 {{ blok.text }}
               </p>
-              <p class="text-lg mb-4">
+              <p v-if="!blok.discount" class="text-lg mb-4">
                 {{ blok.price }}
+              </p>
+              <p v-else class="text-lg mb-4">
+                <span class="line-through text-slate-500">{{ blok.price }}</span>
+                {{ blok.discounted_price }}
+                <div class="text-sm">
+                  <strong class="text-red-500">{{ blok.discount }}</strong>
+                  <span class="text-slate-600 ms-2">{{ blok.discount_deadline }}</span>
+                </div>
               </p>
               <p class="text-base text-slate-700 leading-tight">
                 {{ blok.financed_text }}
@@ -46,6 +54,10 @@ const showFinancing = ref(false)
               >
                 Opciones de financiación
               </a>
+
+              <p class="text-base text-slate-700 leading-tight mt-6">
+                <span class="font-bold">{{ blok.discount_upv }}</span>
+              </p>
 
               <div class="mt-16 text-md">
                 <StoryblokComponent
