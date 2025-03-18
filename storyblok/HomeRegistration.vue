@@ -36,10 +36,10 @@ const showFinancing = ref(false)
               <p v-else class="text-lg mb-4">
                 <span class="line-through text-slate-500">{{ blok.price }}</span>
                 {{ blok.discounted_price }}
-                <div class="text-sm">
+                <span class="block text-sm">
                   <strong class="text-red-500">{{ blok.discount }}</strong>
                   <span class="text-slate-600 ms-2">{{ blok.discount_deadline }}</span>
-                </div>
+                </span>
               </p>
               <p class="text-base text-slate-700 leading-tight">
                 {{ blok.financed_text }}
