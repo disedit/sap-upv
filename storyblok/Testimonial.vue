@@ -50,6 +50,10 @@ defineProps({ blok: Object })
          -webkit-background-clip: text;
          background-clip: text;
          color: transparent;
+
+         span {
+            color: unset !important;
+         }
       }
    }
 }
