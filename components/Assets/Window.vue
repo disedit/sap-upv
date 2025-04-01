@@ -2,11 +2,17 @@
 const { $gsap } = useNuxtApp()
 
 onMounted(() => {
+  const windowContainer = document.querySelector('.window-container')
+  const windowDisplay = window.getComputedStyle(windowContainer, null).display
   const animatedLines = document.querySelectorAll('.animated-line')
 
   animatedLines.forEach(line => {
-    const length = line.getTotalLength() + 1
-    $gsap.set(line, { strokeDasharray: length, strokeDashoffset: length, opacity: 100 })
+    const length = (windowDisplay === 'block') ? line.getTotalLength() + 1 : false
+    if (length) {
+      $gsap.set(line, { strokeDasharray: length, strokeDashoffset: length, opacity: 100 })
+    } else {
+      $gsap.set(line, { opacity: 100 })
+    }
   })
 
   $gsap.to('.animated-line', {

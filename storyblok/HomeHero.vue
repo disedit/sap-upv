@@ -30,7 +30,7 @@ defineProps({ blok: Object })
           </div>
         </div>
       </div>
-      <div class="relative hidden lg:block">
+      <div class="window-container relative hidden lg:block">
         <AssetsWindow class="block absolute left-0 top-4 bottom-4 h-full w-auto" />
       </div>
     </SiteContainer>
