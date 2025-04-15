@@ -20,7 +20,8 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/google-fonts',
     '@nuxt/icon',
-    '@vueuse/nuxt'
+    '@vueuse/nuxt',
+    'nuxt-gtag'
   ],
 
   vite: {
@@ -47,5 +48,9 @@ export default defineNuxtConfig({
       },
       'IBM+Plex+Mono': [400, 700]
     }
+  },
+
+  gtag: {
+    id: 'GTM-W2NL7TBJ'
   }
 })
